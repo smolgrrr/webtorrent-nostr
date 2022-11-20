@@ -36,7 +36,7 @@ function App() {
         cols={50}
         rows={10}
         placeholder="Enter the webtorrent magnet url"
-        value={testId}
+        value={torrentId}
         onChange={(e) => {
           setTorrentId(e.target.value);
         }}
