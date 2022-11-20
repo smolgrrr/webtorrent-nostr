@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import videojs, { VideoJsPlayer } from "video.js";
 import { VideoJS } from "./components/VideoJS";
 import WebTorrent from "webtorrent";
