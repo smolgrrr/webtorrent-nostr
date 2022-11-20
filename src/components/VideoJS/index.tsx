@@ -26,7 +26,6 @@ export const VideoJS = ({
       const player = playerRef.current;
 
       player.autoplay(options.autoplay!);
-    //   player.src(options.sources!);
     }
   }, [options, videoRef, onReady]);
 
@@ -42,7 +41,7 @@ export const VideoJS = ({
   }, [playerRef]);
 
   return (
-    <div data-vjs-player>
+    <div data-vjs-player style={{ width: "50%" }}>
       <div ref={videoRef}></div>
     </div>
   );
