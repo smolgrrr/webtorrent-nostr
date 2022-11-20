@@ -1,25 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useRef, useState } from "react";
+import videojs, { VideoJsPlayer } from "video.js";
+import { VideoJS } from "./components/VideoJS";
+import WebTorrent from "webtorrent";
 
 function App() {
+  const [torrentId, setTorrentId] = useState("");
+  const playerRef = useRef<null | VideoJsPlayer>(null);
+
+  const videoJsOptions = {
+    autoplay: true,
+    // controls: true,
+    responsive: true,
+    fluid: true,
+  };
+
+  const handlePlayerReady = (player: VideoJsPlayer) => {
+    playerRef.current = player;
+
+    player.on("waiting", () => {
+      videojs.log("player is waiting");
+    });
+
+    player.on("dispose", () => {
+      videojs.log("player will dispose");
+    });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+      <input
+        type="text"
+        name="torrentId"
+        id="torrentId"
+        placeholder="Enter the magnet url"
+        onChange={(e) => {
+          setTorrentId(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          const client = new WebTorrent();
+
+          client.add(torrentId, (torrent) => {
+            const file = torrent.files.find((file) => {
+              return file.name.endsWith(".mp4");
+            });
+
+            file?.renderTo("video", {}, () => {});
+          });
+        }}
+      >
+        get
+      </button>
+    </>
   );
 }
 
