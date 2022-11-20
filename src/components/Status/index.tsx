@@ -15,6 +15,7 @@ export const Status = ({
         <div>{"find torrent..."}</div>
       ) : (
         <div>
+          <div>Now you can play the video.</div>
           <div>{`total: ${status?.total}`}</div>
           <div>{`downloaded: ${status?.downloaded}`}</div>
           <div>{`download: ↓ ${status?.downloadSpeed}`}</div>
