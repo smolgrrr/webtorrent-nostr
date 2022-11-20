@@ -18,6 +18,13 @@
     "web-vitals": "^2.1.0",
     "webtorrent": "1.8.26"
   },
+  "devDependencies": {
+    "@types/video.js": "^7.3.49",
+    "@types/webtorrent": "^0.109.3",
+    "customize-cra": "^1.0.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "react-app-rewired": "^2.2.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -41,11 +48,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/video.js": "^7.3.49",
-    "@types/webtorrent": "^0.109.3",
-    "customize-cra": "^1.0.0",
-    "react-app-rewired": "^2.2.1"
   }
 }
