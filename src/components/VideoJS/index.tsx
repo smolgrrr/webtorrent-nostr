@@ -7,7 +7,7 @@ export const VideoJS = ({
   onReady,
 }: {
   options: VideoJsPlayerOptions;
-  onReady: any;
+  onReady: Function;
 }) => {
   const videoRef = useRef<null | HTMLDivElement>(null);
   const playerRef = useRef<null | VideoJsPlayer>(null);
@@ -28,7 +28,7 @@ export const VideoJS = ({
       player.autoplay(options.autoplay!);
     //   player.src(options.sources!);
     }
-  }, [options, videoRef]);
+  }, [options, videoRef, onReady]);
 
   useEffect(() => {
     const player = playerRef.current;
