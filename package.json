@@ -15,7 +15,8 @@
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",
     "video.js": "^7.20.3",
-    "web-vitals": "^2.1.0"
+    "web-vitals": "^2.1.0",
+    "webtorrent": "1.8.26"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -42,6 +43,7 @@
     ]
   },
   "devDependencies": {
-    "@types/video.js": "^7.3.49"
+    "@types/video.js": "^7.3.49",
+    "@types/webtorrent": "^0.109.3"
   }
 }
