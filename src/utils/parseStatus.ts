@@ -1,4 +1,4 @@
-import { StatusInterface } from "../types/progress";
+import { StatusInterface } from "../types/Status";
 import { Torrent } from "webtorrent";
 import { prettyBytes } from "./prettyBytes";
 

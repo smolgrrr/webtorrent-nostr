@@ -5,7 +5,7 @@ import WebTorrent from "webtorrent";
 import { testId } from "./constants/webtorrentId";
 import { parseStatus } from "./utils/parseStatus";
 import { Status } from "./components/Status";
-import { StatusInterface } from "./types/progress";
+import { StatusInterface } from "./types/Status";
 
 function App() {
   const [torrentId, setTorrentId] = useState(testId);

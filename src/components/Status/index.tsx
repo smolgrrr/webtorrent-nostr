@@ -1,4 +1,4 @@
-import { StatusInterface } from "../../types/progress";
+import { StatusInterface } from "../../types/Status";
 
 export const Status = ({
   statusCode,
