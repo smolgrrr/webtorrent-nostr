@@ -2,9 +2,10 @@ import { useRef, useState } from "react";
 import videojs, { VideoJsPlayer } from "video.js";
 import { VideoJS } from "./components/VideoJS";
 import WebTorrent from "webtorrent";
+import { testId } from "./constants/webtorrentId";
 
 function App() {
-  const [torrentId, setTorrentId] = useState("");
+  const [torrentId, setTorrentId] = useState(testId);
   const playerRef = useRef<null | VideoJsPlayer>(null);
 
   const videoJsOptions = {
@@ -29,30 +30,35 @@ function App() {
   return (
     <>
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-      <input
-        type="text"
+      <textarea
         name="torrentId"
         id="torrentId"
-        placeholder="Enter the magnet url"
+        cols={50}
+        rows={10}
+        placeholder="Enter the webtorrent magnet url"
+        value={testId}
         onChange={(e) => {
           setTorrentId(e.target.value);
         }}
       />
-      <button
-        onClick={() => {
-          const client = new WebTorrent();
+      <div>
+        <button
+          style={{ width: "100px", height: "50px" }}
+          onClick={() => {
+            const client = new WebTorrent();
 
-          client.add(torrentId, (torrent) => {
-            const file = torrent.files.find((file) => {
-              return file.name.endsWith(".mp4");
+            client.add(torrentId, (torrent) => {
+              const file = torrent.files.find((file) => {
+                return file.name.endsWith(".mp4");
+              });
+
+              file?.renderTo("video", {}, () => {});
             });
-
-            file?.renderTo("video", {}, () => {});
-          });
-        }}
-      >
-        get
-      </button>
+          }}
+        >
+          Get video
+        </button>
+      </div>
     </>
   );
 }
