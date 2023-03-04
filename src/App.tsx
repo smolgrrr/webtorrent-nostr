@@ -1,78 +1,25 @@
-import { useRef, useState } from "react";
-import videojs, { VideoJsPlayer } from "video.js";
-import { VideoJS } from "./components/VideoJS";
-import WebTorrent from "webtorrent";
-import { testId } from "./constants/webtorrentId";
-import { parseStatus } from "./utils/parseStatus";
-import { Status } from "./components/Status";
-import { StatusInterface } from "./types/Status";
+import { NostrProvider } from "nostr-react";
+import Player from "./components/Player/Player";
+
+import PostButton from "./components/Nostr";
+import ProfileFeed from "./components/getEvents";
+
+const relayUrls = [
+  "wss://relay.snort.social",
+  "wss://nos.lol",
+  "wss://relay.damus.io",
+];
 
 function App() {
-  const [torrentId, setTorrentId] = useState(testId);
-  const [status, setStatus] = useState<StatusInterface | null>(null);
-  const [statusCode, setStatusCode] = useState("ready");
-  const playerRef = useRef<null | VideoJsPlayer>(null);
-
-  const videoJsOptions = {
-    autoplay: true,
-    // controls: true,
-    responsive: true,
-    fluid: true,
-  };
-
-  const handlePlayerReady = (player: VideoJsPlayer) => {
-    playerRef.current = player;
-
-    player.on("waiting", () => {
-      videojs.log("player is waiting");
-    });
-
-    player.on("dispose", () => {
-      videojs.log("player will dispose");
-    });
-  };
-
   return (
     <>
-      <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-      <Status statusCode={statusCode} status={status} />
-      <textarea
-        name="torrentId"
-        id="torrentId"
-        cols={50}
-        rows={10}
-        placeholder="Enter the webtorrent magnet url"
-        value={torrentId}
-        onChange={(e) => {
-          setTorrentId(e.target.value);
-        }}
-      />
+    <NostrProvider relayUrls={relayUrls} debug={true}>
       <div>
-        <button
-          style={{ width: "100px", height: "50px" }}
-          onClick={() => {
-            setStatusCode("wait");
-
-            const client = new WebTorrent();
-
-            client.add(torrentId, (torrent) => {
-              setStatusCode("process");
-
-              const file = torrent.files.find((file) => {
-                return file.name.endsWith(".mp4");
-              });
-
-              setInterval(() => setStatus(parseStatus(torrent)), 300);
-              file?.renderTo("video", {}, () => {});
-              torrent.on("done", () => {
-                setStatusCode("ready");
-              });
-            });
-          }}
-        >
-          Get video
-        </button>
+        <Player />
+        <PostButton />
+        <ProfileFeed />
       </div>
+      </NostrProvider>
     </>
   );
 }

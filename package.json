@@ -1,11 +1,13 @@
 {
-  "name": "webtorrent-video",
+  "name": "webtorrent-nostr",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "nostr-react": "^0.6.4",
+    "nostr-tools": "^1.7.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
