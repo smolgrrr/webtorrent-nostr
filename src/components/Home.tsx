@@ -1,5 +1,4 @@
 import { useNostrEvents } from "nostr-react";
-import { Link } from 'react-router-dom';
 
 function parseContent(content: string) {
   const lines = content.split('\n');
