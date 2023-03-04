@@ -3,6 +3,7 @@
 import Home from "./components/Home";
 import Movie from "./components/Movie";
 import Submit from "./components/Submit";
+import Request from "./components/Request";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path='/movie/:id' element={<Movie />} />
           <Route path='/submit' element={<Submit />} />
+          <Route path='/request' element={<Request />} />
         </Routes>
     </div>
     </Router>
