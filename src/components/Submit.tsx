@@ -7,7 +7,7 @@ import {
   signEvent,
 } from "nostr-tools";
 
-export default function PostButton() {
+const Submit = () => {
   const { publish } = useNostr();
 
   const onPost = async () => {
@@ -30,7 +30,8 @@ export default function PostButton() {
       content: message,
       kind: 1,
       tags: [
-        ["p", "2028cfc4f5ae2b967a75f4196987cbb30d092fa2a439bb807eda382206d39f36"]
+        ["p", "2028cfc4f5ae2b967a75f4196987cbb30d092fa2a439bb807eda382206d39f36"],
+        ["t", "offer"]
       ],
       created_at: dateToUnix(),
       pubkey: getPublicKey(privKey),
@@ -47,3 +48,5 @@ export default function PostButton() {
     <button onClick={onPost}>Post a message!</button>
   );
 }
+
+export default Submit;

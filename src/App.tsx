@@ -1,26 +1,21 @@
-import { NostrProvider } from "nostr-react";
-import Player from "./components/Player/Player";
-
-import PostButton from "./components/Nostr";
-import ProfileFeed from "./components/getEvents";
-
-const relayUrls = [
-  "wss://relay.snort.social",
-  "wss://nos.lol",
-  "wss://relay.damus.io",
-];
+// import Player from "./components/Player/Player";
+// import PostButton from "./components/Nostr";
+import Home from "./components/Home";
+import Movie from "./components/Movie";
+import Submit from "./components/Submit";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <>
-    <NostrProvider relayUrls={relayUrls} debug={true}>
-      <div>
-        <Player />
-        <PostButton />
-        <ProfileFeed />
-      </div>
-      </NostrProvider>
-    </>
+    <Router>
+    <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/movie/:id' element={<Movie />} />
+          <Route path='/submit' element={<Submit />} />
+        </Routes>
+    </div>
+    </Router>
   );
 }
 

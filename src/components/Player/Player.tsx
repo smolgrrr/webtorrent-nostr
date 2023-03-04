@@ -2,13 +2,16 @@ import { useRef, useState } from "react";
 import videojs, { VideoJsPlayer } from "video.js";
 import { VideoJS } from "../VideoJS";
 import WebTorrent from "webtorrent";
-import { testId } from "../../constants/webtorrentId";
 import { parseStatus } from "../../utils/parseStatus";
 import { Status } from "../Status";
 import { StatusInterface } from "../../types/Status";
 
-function Player() {
-  const [torrentId, setTorrentId] = useState(testId);
+interface PlayerProps {
+  magnetlink: string;
+}
+
+function Player({ magnetlink }: PlayerProps) {
+  const [torrentId] = useState(magnetlink);
   const [status, setStatus] = useState<StatusInterface | null>(null);
   const [statusCode, setStatusCode] = useState("ready");
   const playerRef = useRef<null | VideoJsPlayer>(null);
@@ -36,17 +39,6 @@ function Player() {
     <>
       <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
       <Status statusCode={statusCode} status={status} />
-      <textarea
-        name="torrentId"
-        id="torrentId"
-        cols={50}
-        rows={10}
-        placeholder="Enter the webtorrent magnet url"
-        value={torrentId}
-        onChange={(e) => {
-          setTorrentId(e.target.value);
-        }}
-      />
       <div>
         <button
           style={{ width: "100px", height: "50px" }}
