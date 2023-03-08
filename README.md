@@ -1,4 +1,24 @@
-# Getting Started with Create React App
+# Filesharing App Work-In-Progress (Pls Help!)
+Inspired by Fiatjaf's bounty [here](https://bountsr.org/p2p-filesharing/), and a belief that torrent-based filesharing could be better serviced by a 'The Pirate Bay'-like Nostr client that remains censorship-resistant, and resilient.
+
+The aim is to build a simple filesharing app using a combination of Nostr and WebTorrent/BitTorrent.\
+By being open-source, ideally when one client gets shutdown another can startup without any loss to the ecosystem.
+
+
+
+One main feature of the app is the ability to request/offer files, which can be resolved with a satoshi-denominated prize.
+As an example, an “offer” is composed of the file link and a short description of the files, in some standard plaintext format, like
+
+`title: Autobiography, Charles Dickens`\
+`description: A very cool book I wrote`\
+`location: magnet:...`\
+which will be broadcasted as a kind:1 event, with a "t" tag (offer/request), as well as a "p" tag of the filesharing client's designated nostr pubkey (initially). Currently, there is no spec for how to appropriately enforce pay-to-access for offered files, and initially it will rely on an honour/repuation system.
+
+## Further work
+I personally expect to use this system to improve my other project [lightning.movie](https://www.lightning.movie/), in which I would like to offer some way for people to add movies/shows to the site as a torrent which could be paid for by users with a satoshi-based fee.
+
+<br/><br/>
+## Run locally
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -6,6 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `yarn install`
 ### `yarn start`
 
 Runs the app in the development mode.\
@@ -28,16 +49,6 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
