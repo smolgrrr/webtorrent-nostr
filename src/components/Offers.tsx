@@ -32,25 +32,22 @@ const Offers = () => {
   return (
     <div>
       <h1>Offers</h1>
-      <button onClick={() => window.location.href = '/submit'}>Upload a file</button>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
+      <table id="searchResult">
+        <thead id="tableHead">
+          <tr className="header">
             <th>Link</th>
+            <th>Title</th>
             <th>Description</th>
             <th>Magnet Link</th>
           </tr>
         </thead>
         <tbody>
           {events.map((event) => {
-            const { title, TMDB_id, description, magnetlink } = parseContent(event.content);
+            const { title, description, magnetlink } = parseContent(event.content);
             return (
             <tr key={event.id}>
-              <td><a href={`movie/${event.id}`}>{event.id}</a></td>
-              <td>{title}</td>
-              <td>{TMDB_id}</td>
+              <td><a href={`movie/${event.id}`}>Video</a></td>
+              <td title="Order by Name">{title}</td>
               <td>{description}</td>
               <td>{magnetlink}</td>
             </tr>

@@ -4,7 +4,14 @@ import Home from "./components/Home";
 import Movie from "./components/Movie";
 import Submit from "./components/Submit";
 import Request from "./components/Request";
+import './style.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+declare global {
+  interface Window {
+    nostr?: any;
+  }
+}
 
 function App() {
   return (
