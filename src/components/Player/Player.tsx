@@ -36,12 +36,11 @@ function Player({ magnetlink }: PlayerProps) {
   };
 
   return (
-    <>
-      <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
+  <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
       <Status statusCode={statusCode} status={status} />
       <div>
         <button
-          style={{ width: "100px", height: "50px" }}
           onClick={() => {
             setStatusCode("wait");
 
@@ -65,7 +64,7 @@ function Player({ magnetlink }: PlayerProps) {
           Get video
         </button>
       </div>
-    </>
+    </div>
   );
 }
 

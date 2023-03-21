@@ -6,6 +6,7 @@ import {
   getPublicKey,
   signEvent,
 } from "nostr-tools";
+import Header from "./Header";
 
 declare const window: {
   nostr?: any;
@@ -72,6 +73,8 @@ const Submit = () => {
   };
 
   return (
+    <>
+    <Header />
     <form onSubmit={handleSubmit}>
       <label>
         Type:
@@ -103,6 +106,7 @@ const Submit = () => {
       )}
       <button type="submit">Post a message!</button>
     </form>
+    </>
   );
 }
 
