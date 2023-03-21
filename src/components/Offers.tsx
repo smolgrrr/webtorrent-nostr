@@ -1,4 +1,11 @@
-import { useNostrEvents } from "nostr-react";
+import { useNostrEvents, useProfile } from "nostr-react";
+
+interface Event {
+  id: string;
+  content: string;
+  created_at: number;
+  pubkey: string;
+}
 
 function parseContent(content: string) {
   const lines = content.split('\n');
@@ -13,6 +20,33 @@ function parseContent(content: string) {
     description: data.description,
     magnetlink: data.location,
   };
+}
+
+function NostrName(pubkey: string) {
+  const { data: userData } = useProfile({ pubkey });
+  return {
+    name: userData?.name
+  };
+}
+
+function EventRow({ event }: { event: Event }) {
+  const { title, description, magnetlink } = parseContent(event.content);
+  const name = NostrName(event.pubkey).name;
+
+  return (
+    <tr key={event.id}>
+      <td><a href={`/video}`}>Video</a></td>
+      <td title="Order by Name"><a href={`movie/${event.id}`}>{title}</a></td>
+      <td>{description}</td>
+      <td>{new Date(event.created_at * 1000).toLocaleDateString()} {new Date(event.created_at * 1000).toLocaleTimeString()}</td>
+      <td>
+        <a href={magnetlink} title="Download this torrent using magnet">
+          <img src="icon-magnet.gif" alt="Magnet link"/>
+        </a>
+      </td>
+      <td>{name ? name : <i>anonymous</i>}</td>
+    </tr>
+  );
 }
 
 const Offers = () => {
@@ -35,24 +69,16 @@ const Offers = () => {
       <table id="searchResult">
         <thead id="tableHead">
           <tr className="header">
-            <th>Link</th>
-            <th>Title</th>
+            <th>Type</th>
+            <th>Name</th>
             <th>Description</th>
-            <th>Magnet Link</th>
+            <th>Uploaded</th>
+            <th></th>
+            <th>ULed by</th>
           </tr>
         </thead>
         <tbody>
-          {events.map((event) => {
-            const { title, description, magnetlink } = parseContent(event.content);
-            return (
-            <tr key={event.id}>
-              <td><a href={`movie/${event.id}`}>Video</a></td>
-              <td title="Order by Name">{title}</td>
-              <td>{description}</td>
-              <td>{magnetlink}</td>
-            </tr>
-            )
-          })}
+        {events.map((event) => <EventRow event={event} />)}
         </tbody>
       </table>
     </div>

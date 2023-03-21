@@ -54,10 +54,8 @@ const Home = () => {
       </div>
     </nav>
     <p style={{overflowWrap: "break-word"}}>
-      <a href="https://bitcoin.org" target="_NEW">BTC</a>: <b><a href="bitcoin:bc1qf8cedqguh2ucc3fgsphmgt789q9szh35vtl38m">bc1qf8cedqguh2ucc3fgsphmgt789q9szh35vtl38m</a></b>
-      <br/><a href="https://litecoin.org" target="_NEW">LTC</a>: <b><a href="litecoin:Les2qb8tp16kcxkm6cxzWdCV5174pMzcNK">Les2qb8tp16kcxkm6cxzWdCV5174pMzcNK</a></b>
-      <br/><a href="https://ethereum.org" target="_NEW">ETH</a>: <b><a href="ethereum:0xc7F9f7Acc3941cC0Da9956410D0023FB936a6A09">0xc7F9f7Acc3941cC0Da9956410D0023FB936a6A09</a></b>
-      <br/><a href="https://getmonero.org" target="_NEW">XMR</a>: <b><a href="monero:43pgpvwinkK4HCxJvEH7Fs2KMkH1VBCVqRjyCVLfCwTrGD1NzGSHkmuDUyFqCjBiCPLYePT1StfQn1uZhkPJczzzFXjYZ1U">43pgpvwinkK4HCxJvEH7Fs2KMkH1VBCVqRjyCVLfCwTrGD1NzGSHkmuDUyFqCjBiCPLYePT1StfQn1uZhkPJczzzFXjYZ1U</a></b>
+        <b><a href="lightning:smolgrrr@ln.tips">smolgrrr@ln.tips</a></b>
+        <br/><b><a href="bitcoin:bc1qf8cedqguh2ucc3fgsphmgt789q9szh35vtl38m">bc1qf8cedqguh2ucc3fgsphmgt789q9szh35vtl38m</a></b>
     </p>
   </footer>
   <iframe referrerPolicy="no-referrer" src="https://s.uuidksinc.net/match/1411/?remote_uid=17202090899688090000" width="1px" height="1px" style={{padding: "0", margin: "0", border: "0", position: "absolute", width: "1px!important", height: "1px!important"}}></iframe>
