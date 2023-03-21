@@ -1,6 +1,7 @@
 // import Player from "./components/Player/Player";
 // import PostButton from "./components/Nostr";
 import Home from "./components/Home";
+import Browse from "./components/Browse";
 import Movie from "./components/Movie";
 import Submit from "./components/Submit";
 import Request from "./components/Request";
@@ -19,6 +20,7 @@ function App() {
     <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/browse" element={<Browse />} />
           <Route path='/movie/:id' element={<Movie />} />
           <Route path='/submit' element={<Submit />} />
           <Route path='/request' element={<Request />} />

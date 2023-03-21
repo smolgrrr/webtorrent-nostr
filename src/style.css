@@ -1,7 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+@import 'home.css';
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+}
+
 body {
     text-align: center;
     font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size: .7em;
+    font-size: 0.7em;
     padding: 10px;
     margin: 0;
     color: #000;
@@ -86,8 +93,8 @@ h2 {
     text-align: right;
     padding: 2px 5px;
     margin: 0;
-    border-bottom: 1px solid #d2b9a6;
-    background: #f6f1ee;
+    border-bottom: 1px solid #b2a6d2;
+    background: #f2eef6;
     font-weight: 400;
     clear: both
 }
@@ -130,7 +137,7 @@ h2 span {
 }
 
 .nohover:hover {
-    background: #f6f1ee
+    background: #f2eef6
 }
 
 .hide {
@@ -165,7 +172,7 @@ thead#tableHead a:hover {
 }
 
 thead#tableHead th {
-    background: #d2b9a6
+    background: #b2a6d2
 }
 
 table#searchResult th,
@@ -175,7 +182,7 @@ table#searchResult td {
 }
 
 table#searchResult tr {
-    background: #f6f1ee
+    background: #f2eef6
 }
 
 table#searchResult tr.alt {
@@ -188,7 +195,7 @@ table#searchResult tr:hover {
 
 table#searchResult td.vertTh {
     font-weight: 700;
-    color: #7b563a
+    color: #553a7b
 }
 
 table#searchResult img {
@@ -209,7 +216,7 @@ table#searchResult img.co {
 
 .uldetails label {
     font-weight: 700;
-    color: #7b563a
+    color: #553a7b
 }
 
 .uldetails text,
@@ -244,15 +251,15 @@ table#searchResult img.co {
     vertical-align: top;
     padding: 7px 0 7px 0;
     margin: 0;
-    color: #7b563a;
-    border-bottom: 1px dashed #e8dcd2
+    color: #553a7b;
+    border-bottom: 1px dashed #e4d2e8
 }
 
 .uldetails .tdleft {
     width: 100px;
     text-align: left;
     padding-right: 10px;
-    border-bottom: 1px dashed #e8dcd2
+    border-bottom: 1px dashed #e4d2e8
 }
 
 #browseContainer {
@@ -351,7 +358,7 @@ dt#showall a:hover {
     text-align: right;
     padding-right: 4px;
     width: 20px;
-    background: #d2b9a6;
+    background: #b2a6d2;
     float: right;
     clear: both;
     font-size: .8em;
@@ -388,7 +395,7 @@ dt#showall a:hover {
 #detailsframe {
     clear: both;
     border-top: 1px solid #fff;
-    background: #f6f1ee;
+    background: #f2eef6;
     text-align: left;
     overflow: hidden;
     margin-top: 10px
@@ -405,7 +412,7 @@ dt#showall a:hover {
 
 #detailsframe #title {
     height: 1%;
-    background: #d2b9a6
+    background: #b2a6d2
 }
 
 #detailsframe #title div {
@@ -418,12 +425,12 @@ dt#showall a:hover {
 #details {
     padding: 10px;
     padding-top: 0;
-    background: #f6f1ee
+    background: #f2eef6
 }
 
 #details h3 {
     margin: 0;
-    border-bottom: 1px solid #d2b9a6;
+    border-bottom: 1px solid #b2a6d2;
     font-size: 1.3em
 }
 
@@ -439,7 +446,7 @@ dt#showall a:hover {
 
 #details h4 {
     margin: 20px 0 0;
-    color: #7b563a;
+    color: #553a7b;
     font-size: 1.2em
 }
 
@@ -458,14 +465,14 @@ dt#showall a:hover {
     float: left;
     font-weight: 700;
     padding: 0 5px 0 0;
-    color: #7b563a;
-    border-bottom: 1px dashed #e8dcd2;
+    color: #553a7b;
+    border-bottom: 1px dashed #e4d2e8;
     clear: both
 }
 
 #details dd {
     padding: 0 0 0 40px;
-    border-bottom: 1px dashed #e8dcd2
+    border-bottom: 1px dashed #e4d2e8
 }
 
 #details .col1 {
@@ -489,7 +496,7 @@ dt#showall a:hover {
 #details #CommentDiv {
     text-align: left;
     clear: both;
-    background-color: #f6f1ee;
+    background-color: #f2eef6;
     width: 620px;
     height: 130px;
     padding: 10px;
@@ -505,7 +512,7 @@ dt#showall a:hover {
 #filelistContainer {
     margin: 3em 0 1em;
     min-height: 50px;
-    border: 1px solid #d2b9a6;
+    border: 1px solid #b2a6d2;
     background: #fff;
     padding: 10px;
     clear: left
@@ -525,7 +532,7 @@ dt#showall a:hover {
     margin: 1em 0 1em 0;
     width: 600px;
     min-height: 50px;
-    border: 1px solid #d2b9a6;
+    border: 1px solid #b2a6d2;
     background: #fff;
     padding: 10px;
     font-size: 12px;
@@ -613,15 +620,15 @@ td#details {
     padding: 1px 4px;
     border-bottom: 1px solid #fff;
     border-right: 1px solid #fff;
-    background: #f6f1ee
+    background: #f2eef6
 }
 
 thead#details th#details {
-    background: #d2b9a6
+    background: #b2a6d2
 }
 
 tbody#details th#details {
-    color: #7b563a
+    color: #553a7b
 }
 
 .shortcuts {
@@ -663,7 +670,7 @@ tbody#details th#details {
 }
 
 #comments p.byline {
-    color: #bb967a;
+    color: #937abb;
     margin-top: 12px
 }
 
@@ -819,6 +826,10 @@ tbody#details th#details {
 * html dd.rating {
     margin-left: 190px
 }
+
+#TPBlogo {
+    width: 75px;
+  }
 
 .logged-in a:hover {
     /* background: url(/static/img/icons/star1.gif) no-repeat; */
@@ -1100,7 +1111,7 @@ dl#keywords {
 }
 
 .spons-link strong {
-    color: #7b563a
+    color: #553a7b
 }
 
 #irc {
@@ -1345,9 +1356,9 @@ dl#keywords {
 }
 
 #blog #comments dt {
-    background: #f6f1ee;
+    background: #f2eef6;
     padding: .3em;
-    color: #7b563a;
+    color: #553a7b;
     margin-top: 1.5em
 }
 
@@ -1455,7 +1466,7 @@ dl#keywords {
     margin: 0;
     padding: 0;
     width: 3.6em;
-    background: #d2b9a6;
+    background: #b2a6d2;
     padding: .2em;
     float: left
 }
@@ -1471,7 +1482,7 @@ dl#keywords {
 }
 
 #torrent-admin #buttons {
-    background: #f6f1ee;
+    background: #f2eef6;
     float: left;
     padding: .2em .2em .2em 1em
 }
@@ -1483,11 +1494,11 @@ dl#keywords {
 
 #uploader-admin,
 .user-admin {
-    border: 1px solid #d2b9a6;
+    border: 1px solid #b2a6d2;
     position: absolute;
     top: -1.5em;
     right: -4em;
-    background: #f6f1ee;
+    background: #f2eef6;
     padding: .2em
 }
 
@@ -1680,7 +1691,7 @@ tbody {
     list-style: none;
     margin: 10px 0;
     padding: 0;
-    border-top: 1px solid #d2b9a6
+    border-top: 1px solid #b2a6d2
 }
 
 .morealbums ul {
@@ -1689,13 +1700,13 @@ tbody {
 
 .morealbums li {
     list-style: none;
-    border-bottom: 1px solid #d2b9a6;
+    border-bottom: 1px solid #b2a6d2;
     padding: 4px
 }
 
 .upcomingevents li {
     list-style: none;
-    border-bottom: 1px solid #d2b9a6
+    border-bottom: 1px solid #b2a6d2
 }
 
 .upcomingevents a {

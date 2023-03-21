@@ -1894,6 +1894,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/google-fonts@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/google-fonts/-/google-fonts-1.0.0.tgz#0307da786a5fef3ea26c7eb581dce2d1fe03c2e7"
+  integrity sha512-nMAjInWvM/CzXMVNw2o+V4k22i3iwmOPIQRDZSwqoKeI1/QWWSBULzsCrh3EhG29COWgkynrcoVc7788HLpYlQ==
+
 "@types/graceful-fs@^4.1.2":
   version "4.1.6"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.6.tgz#e14b2576a1c25026b7f02ede1de3b84c3a1efeae"
@@ -5266,6 +5271,11 @@ globby@^11.0.4, globby@^11.1.0:
     ignore "^5.2.0"
     merge2 "^1.4.1"
     slash "^3.0.0"
+
+google-fonts@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/google-fonts/-/google-fonts-1.0.0.tgz#202e287a0c6272e3d651ac7e00c8f5aefc85b099"
+  integrity sha512-i3zzI697L9WdmnaSqYB5KYN2fqDpjfpW+UTBdzhmte6JSvS2GOczZZtfocpWhwPwPqsEAH76/46DrsnD5W6BQQ==
 
 gopd@^1.0.1:
   version "1.0.1"
