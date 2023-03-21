@@ -56,10 +56,9 @@ const Home = () => {
     <p style={{overflowWrap: "break-word"}}>
         <b><a href="lightning:smolgrrr@ln.tips">smolgrrr@ln.tips</a></b>
         <br/><b><a href="bitcoin:bc1qf8cedqguh2ucc3fgsphmgt789q9szh35vtl38m">bc1qf8cedqguh2ucc3fgsphmgt789q9szh35vtl38m</a></b>
+        <br/><b><a href="nostr:npub13azv2cf3kd3xdzcwqxlgcudjg7r9nzak37usnn7h374lkpvd6rcq4k8m54">npub13azv2cf3kd3xdzcwqxlgcudjg7r9nzak37usnn7h374lkpvd6rcq4k8m54</a></b>
     </p>
   </footer>
-  <iframe referrerPolicy="no-referrer" src="https://s.uuidksinc.net/match/1411/?remote_uid=17202090899688090000" width="1px" height="1px" style={{padding: "0", margin: "0", border: "0", position: "absolute", width: "1px!important", height: "1px!important"}}></iframe>
-  <iframe referrerPolicy="no-referrer" src="https://s.uuidksinc.net/match/1410/?remote_uid=17202090899688090000" width="1px" height="1px" style={{padding: "0", margin: "0", border: "0", position: "absolute", width: "1px!important", height: "1px!important"}}></iframe>
 </body>
 );
  
