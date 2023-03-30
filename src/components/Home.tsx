@@ -21,7 +21,7 @@ const Home = () => {
             <section>
               <form action="/search.php" name="q">
                 <div>
-                  <input name="q" type="search" title="Punk Search" placeholder="Punk Search" autoFocus required style={{width: "20em", padding: "4px"}}/>
+                  <input name="q" type="search" title="Penis Search" placeholder="Penis Search" autoFocus required style={{width: "20em", padding: "4px"}}/>
                 </div>
                 <div>
                   <span className="form-box"><label title="All" htmlFor="all" accessKey="a"><input name="all" id="all" type="checkbox"  defaultChecked/>All</label></span>
@@ -33,7 +33,7 @@ const Home = () => {
                   <span className="form-box"><label title="Other" htmlFor="other" accessKey="y"><input name="other" id="other" type="checkbox" />Other</label></span>
                 </div>
                 <div>
-                  <input type="submit" title="Punk Search" name="search" value="Punk Search" accessKey="s"/>
+                  <input type="submit" title="Penis Search" name="search" value="Penis Search" accessKey="s"/>
                   <input type="submit" title="I'm Feeling Lucky" name="lucky" value="I'm Feeling Lucky"/>
                 </div>
                 <input type="hidden" name="page" value="0"/>
