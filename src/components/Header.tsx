@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         <a href="/top" title="Top 100">Top 100</a> <br />
         <input type="search" title="Pirate Search" name="q" required placeholder="Search here..." style={{ backgroundColor: '#ffffe0' }} className="searchBox" />
         <input type="submit" value="Pirate Search" className="submitbutton" /> <br />
-        <label htmlFor="audio" title="Audio">
+        {/* <label htmlFor="audio" title="Audio">
           <input id="audio" name="audio" onClick={() => {}} type="checkbox" />Audio
         </label>
         <label htmlFor="video" title="Video">
@@ -41,11 +41,10 @@ const Header: React.FC = () => {
         </label>
         <label htmlFor="porn" title="Porn">
           <input id="porn" name="porn" onClick={() => {}} type="checkbox" />Porn
-        </label>
+        </label> */}
       </form>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         <button onClick={() => window.location.href = '/submit'}>Upload a file</button>
-        <button onClick={() => window.location.href = '/submit'}>Request a file</button>
       </div>
     </div>
   );
